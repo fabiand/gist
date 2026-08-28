@@ -1,0 +1,10 @@
+title: Your Site Title
+description: A short description of your site
+theme: minima
+
+# GitHub Pages settings
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
