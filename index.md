@@ -24,7 +24,7 @@ This includes (but is not limited to):
 - Desaster Recovery & Backup
 - Running Virtual Machine with enterprise functionality
 
-> [^!TIP]
+> [!TIP]
 > To contrast: Today KubeVirt is mostly about the last bullet point (and even on this there are sometimes tensions).
 
 ## Architecture
