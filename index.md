@@ -34,6 +34,22 @@ Thus virtualization requirements should be solved in the core - Kubernetes and/o
 
 Under pressure we might compromise on this principle.
 
+## Ownership
+
+What                | Who
+--------------------|--------------------------
+Guest               | VM owner
+VM configuration    | VM owner
+VM API              | OpenShift Virtualization
+Resource management | OpenShift
+
+### Configuration
+
+- _OpenShift Virtualization_ owns the configuration of HCO and it's dependency tree
+- _OpenShift Virtualization Autopilot_ owns the configuration OLM operators
+- _OpenShift Virtualization Autopilot_ owns the configuration of OpenShift where it diverges from the defaults
+- _OpenShift_ owns the default OpenShift configuration
+
 ## Compute
 
 ### Nodes
@@ -64,6 +80,12 @@ Limits on VMs are
 
 ## Storage
 
+### CSI & Storage Capabilities
+
+All storage is assumed to be provided by Kubernetes via Container Native Storage (CSI).
+
+All storage capabilities (such as Snapshots, Clone, CBT, …) are expected to be provided by Kubernetes and the CSI driver.
+
 ### Availability
 
 Storage availability is required for VMs to run. Storage unavailability has to be assumed to lead to VM interruptions and crashes.
@@ -72,3 +94,17 @@ Storage availability is required for VMs to run. Storage unavailability has to b
 
 Storage latency > 100ms is expected to cause problems.
 p99 stiorage latency is expected to be sub 10ms for regular enterprise workloads.
+
+## Network
+
+### CNI & Network Capabilities
+
+All networking is provided by Kubernetes via Container Network Interface (CNI).
+
+All network capabilities (such as IPAM, persitent IP, …) are expected to be provided by Kubernetes and the CNI plugin.
+
+### Plumbing
+
+OpenShift Virtualizations scope is
+- to connect a VM process, inside the pod, in an efficient way to the provided network resources
+- ensure that node and cluster sided changes are reflected in a virtualization native way to the VM
