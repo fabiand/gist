@@ -17,6 +17,16 @@ OpenShift Virtualization is designed to
 
 Requirements of enterprise virtualization workloads define the scope of OpenShift Virtualization.
 
+This includes (but is not limited to):
+- Provisioning the cloud or data center infrstructure
+- High-Availability of workloads
+- Software Defined Networking
+- Desaster Recovery & Backup
+- Running Virtual Machine with enterprise functionality
+
+> [!TIP]
+> To contrast: Today KubeVirt is mostly about the last bullet point (and even on this there are sometimes tensions).
+
 ## Architecture
 
 ### Complement the core
