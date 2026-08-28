@@ -13,6 +13,10 @@ OpenShift Virtualization is designed to
 - run all enterprise vitrualization workloads
 - run them semaless alongside containers and other OpenShift workloads
 
+## Scope
+
+Requirements of enterprise virtualization workloads define the scope of OpenShift Virtualization.
+
 ## Architecture
 
 ### Complement the core
@@ -25,7 +29,7 @@ OpenShift and OpenShift Virtualization complement this core with additional proj
 
 ## Razor
 
-Virtualization -problems- use-cases are commonly sharing requirements with container workloads.
+Virtualization use-cases are commonly sharing requirements with container use-cases.
 Thus virtualization requirements should be solved in the core - Kubernetes and/or OpenShift - first if they are also relevant for container workloads.
 
 Under pressure we might compromise on this principle.
