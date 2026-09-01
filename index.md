@@ -102,8 +102,10 @@ Storage availability is required for VMs to run. Storage unavailability has to b
 
 ### Performance
 
-Storage latency > 100ms is expected to cause problems.
+Storage IO latency above 500ms is expected to cause problems with workloads like Microsoft Windows [^iolatencywindows].
 p99 stiorage latency is expected to be sub 10ms for regular enterprise workloads.
+
+[^iolatencywindows]: https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/troubleshoot-performance-problems-in-windows#storage
 
 ## Network
 
